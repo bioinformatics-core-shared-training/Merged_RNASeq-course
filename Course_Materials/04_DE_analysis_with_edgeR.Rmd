@@ -121,7 +121,7 @@ The common dispersion estimates the overall BCV of the dataset, averaged over al
 
 ```{r commonDispersion}
 
-dgeObj <- estimateCommonDisp(dgeObj)
+dgeObj <- estimateGLMCommonDisp(dgeObj, design)
 
 ```
 
@@ -129,8 +129,8 @@ Then we estimate gene-wise dispersion estimates, allowing a possible trend with 
 
 ```{r genewiseDispersion}
 
-dgeObj <- estimateGLMTrendedDisp(dgeObj)
-dgeObj <- estimateTagwiseDisp(dgeObj)
+dgeObj <- estimateGLMTrendedDisp(dgeObj, design)
+dgeObj <- estimateGLMTagwiseDisp(dgeObj, design)
 
 ```
 
